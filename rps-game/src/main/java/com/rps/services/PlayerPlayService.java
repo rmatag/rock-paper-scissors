@@ -2,6 +2,7 @@ package com.rps.services;
 
 import com.rps.types.GameMode;
 import com.rps.types.PlayerPlay;
+import com.rps.utils.PlayUtils;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Random;
@@ -9,13 +10,15 @@ import java.util.Random;
 public class PlayerPlayService {
 
     private RestTemplate restTemplate = new RestTemplate();
+    private static final String HOST_NAME = "http://localhost:8080";
+    private static final String GET_REMOTE_PLAY_PATH = HOST_NAME + "/remote-play";
 
     public PlayerPlay getMainPlayerPlay(GameMode gameMode) {
         switch (gameMode) {
         case UNFAIR:
         case FAIR:
         case REMOTE:
-            return getRandomPlay();
+            return PlayUtils.getRandomPlay();
         default:
             throw new IllegalArgumentException(getIllegalArgumentExceptionMessage(gameMode));
         }
@@ -26,17 +29,13 @@ public class PlayerPlayService {
         case UNFAIR:
             return PlayerPlay.ROCK;
         case FAIR:
-            return getRandomPlay();
+            return PlayUtils.getRandomPlay();
         case REMOTE:
-            return restTemplate.getForObject("http://localhost:8080/remote-play", PlayerPlay.class);
+            return restTemplate.getForObject(GET_REMOTE_PLAY_PATH, PlayerPlay.class);
         default:
             throw new IllegalArgumentException(getIllegalArgumentExceptionMessage(gameMode));
         }
 
-    }
-
-    public PlayerPlay getRandomPlay() {
-        return PlayerPlay.values()[new Random().nextInt(3)];
     }
 
     private String getIllegalArgumentExceptionMessage(GameMode gameMode) {

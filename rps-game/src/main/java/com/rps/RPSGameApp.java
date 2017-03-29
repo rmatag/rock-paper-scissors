@@ -4,7 +4,7 @@ import com.rps.models.AdversaryPlayer;
 import com.rps.models.MainPlayer;
 import com.rps.models.PlayerPair;
 import com.rps.types.GameMode;
-import javafx.util.Pair;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -13,12 +13,24 @@ import java.util.Scanner;
 
 @SpringBootApplication
 public class RPSGameApp {
+    private static final Integer NUM_ITERATIONS = 10;
+
+    @Autowired
+    MainPlayer mainPlayer;
+
+    @Autowired
+    AdversaryPlayer adversaryPlayer;
 
     public static void main(String[] args) throws Throwable {
         ConfigurableApplicationContext context = new SpringApplicationBuilder()
                 .sources(RPSGameApp.class)
                 .run(args);
 
+        RPSGameApp app = context.getBean(RPSGameApp.class);
+        app.start(context);
+    }
+
+    private void start(ConfigurableApplicationContext context) {
         int userChoice;
         GameMode gameMode = null;
         userChoice = showMenu();
@@ -34,17 +46,22 @@ public class RPSGameApp {
             break;
         }
 
+        System.out.println("GameMode chosen: " + gameMode.name());
         if (userChoice != 4) {
-
-            System.out.println("GameMode chosen: " + gameMode.name());
-            PlayerPair<MainPlayer, AdversaryPlayer> players = new PlayerPair<>(new MainPlayer(), new AdversaryPlayer());
-            players.getMainPlayer().play(gameMode);
-            players.getAdversaryPlayer().play(gameMode);
+            for (int i = 0; i < NUM_ITERATIONS; i++) {
+                System.out.println("PLAYING ITERATION: " + (i + 1) );
+                PlayerPair<MainPlayer, AdversaryPlayer> players = new PlayerPair<>(mainPlayer, adversaryPlayer);
+                players.getMainPlayer().play(gameMode);
+                players.getAdversaryPlayer().play(gameMode);
+                System.out.println();
+                System.out.println();
+                System.out.println();
+            }
         }
 
     }
 
-    public static int showMenu() {
+    private static int showMenu() {
 
         int selection;
         Scanner input = new Scanner(System.in);
