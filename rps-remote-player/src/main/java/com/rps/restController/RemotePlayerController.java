@@ -1,23 +1,26 @@
 package com.rps.restController;
 
-import com.rps.types.PlayMode;
+import com.rps.services.PlayerPlayService;
+import com.rps.types.GameMode;
+import com.rps.types.PlayerPlay;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-/**
- * Created by rmata on 3/29/17.
- */
 @Controller
 @RequestMapping("/remote-play")
 public class RemotePlayerController {
 
-    @RequestMapping(method = RequestMethod.GET)
-    public @ResponseBody String getRemotePlay() {
-        PlayMode playMode = PlayMode.REMOTE;
+    @Autowired
+    private PlayerPlayService playerPlayService;
 
-        return "playFromTheRemotePlayer" + playMode.name();
+    @RequestMapping(method = RequestMethod.GET)
+    public @ResponseBody PlayerPlay getRemotePlay() {
+        PlayerPlay remotePlayerPlay = playerPlayService.getRandomPlay();
+        System.out.println("Remote player playing: " + remotePlayerPlay);
+        return remotePlayerPlay;
     }
 
 }
