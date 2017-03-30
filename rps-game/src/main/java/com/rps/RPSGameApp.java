@@ -1,11 +1,15 @@
 package com.rps;
 
+import static com.rps.types.PlayResult.MAIN_PLAYER_WINS;
+import static com.rps.types.PlayResult.ADVERSARY_PLAYER_WINS;
+import static com.rps.types.PlayResult.DRAW;
+
 import com.rps.models.AdversaryPlayer;
 import com.rps.models.MainPlayer;
 import com.rps.models.PlayerPair;
 import com.rps.types.GameMode;
-import com.rps.types.PlayerPlay;
 import com.rps.types.PlayResult;
+import com.rps.types.PlayerPlay;
 import javafx.util.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,12 +48,12 @@ public class RPSGameApp {
 
     protected void start(ConfigurableApplicationContext context) {
         GameMode gameMode = null;
-        results.put(PlayResult.MAIN_PLAYER_WINS, 0);
-        results.put(PlayResult.ADVERSARY_PLAYER_WINS, 0);
-        results.put(PlayResult.DRAW, 0);
+
+        initializeResults();
         showPayoffMatrix();
         gameMode = getGameModeFromConsole(context, gameMode);
         makePlayersPlay(gameMode);
+
     }
 
     protected void makePlayersPlay(GameMode gameMode) {
@@ -60,39 +64,51 @@ public class RPSGameApp {
 
                 Pair<PlayerPlay, PlayerPlay> playersPlayPair = players.play(gameMode);
                 logger.info("Main Player play: " + playersPlayPair.getKey() + " | Adversary Player play: " + playersPlayPair.getValue());
-                verifyPlayResult(playersPlayPair);
 
+                updateResults(playersPlayPair);
                 logger.info("\n\n");
             }
 
             logger.info("TOTAL RESULTS:");
-            logger.info("MAIN PLAYER GAINS: " + results.get(PlayResult.MAIN_PLAYER_WINS));
-            logger.info("ADVERSARY PLAYER GAINS: " + results.get(PlayResult.ADVERSARY_PLAYER_WINS));
-            logger.info("DRAWS: " + results.get(PlayResult.DRAW));
+            logger.info("MAIN PLAYER GAINS: " + results.get(MAIN_PLAYER_WINS));
+            logger.info("ADVERSARY PLAYER GAINS: " + results.get(ADVERSARY_PLAYER_WINS));
+            logger.info("DRAWS: " + results.get(DRAW));
         }
     }
 
-    protected void verifyPlayResult(Pair<PlayerPlay, PlayerPlay> playersPlayPair) {
+    protected void updateResults(Pair<PlayerPlay, PlayerPlay> playersPlayPair) {
         Integer matrixValue = payoffMatrix.get(playersPlayPair.getKey()).get(playersPlayPair.getValue());
         String playResultStr;
 
         if (matrixValue > 0) {
             playResultStr = "Main Player wins";
-            Integer currentResult = results.get(PlayResult.MAIN_PLAYER_WINS);
-            results.put(PlayResult.MAIN_PLAYER_WINS, currentResult + 1);
+            updateMainPlayerResults();
         } else if (matrixValue == 0) {
             playResultStr = "Draw";
-            Integer currentResult = results.get(PlayResult.DRAW);
-            results.put(PlayResult.DRAW, currentResult + 1);
+            updateDrawResults();
         } else {
             playResultStr = "Adversary Player wins";
-            Integer currentResult = results.get(PlayResult.ADVERSARY_PLAYER_WINS);
-            results.put(PlayResult.ADVERSARY_PLAYER_WINS, currentResult + 1);
+            updateAdversaryPlayerResults();
         }
         logger.info("Result: " + playResultStr);
     }
 
-    protected GameMode getGameModeFromConsole(ConfigurableApplicationContext context, GameMode gameMode) {
+    protected void updateAdversaryPlayerResults() {
+        Integer currentResult = results.get(ADVERSARY_PLAYER_WINS);
+        results.put(ADVERSARY_PLAYER_WINS, currentResult + 1);
+    }
+
+    protected void updateDrawResults() {
+        Integer currentResult = results.get(DRAW);
+        results.put(DRAW, currentResult + 1);
+    }
+
+    protected void updateMainPlayerResults() {
+        Integer currentResult = results.get(MAIN_PLAYER_WINS);
+        results.put(MAIN_PLAYER_WINS, currentResult + 1);
+    }
+
+    private GameMode getGameModeFromConsole(ConfigurableApplicationContext context, GameMode gameMode) {
         userChoice = showMenu();
 
         switch (userChoice) {
@@ -106,6 +122,12 @@ public class RPSGameApp {
             break;
         }
         return gameMode;
+    }
+
+    private void initializeResults() {
+        results.put(MAIN_PLAYER_WINS, 0);
+        results.put(ADVERSARY_PLAYER_WINS, 0);
+        results.put(DRAW, 0);
     }
 
     private void showPayoffMatrix() {
