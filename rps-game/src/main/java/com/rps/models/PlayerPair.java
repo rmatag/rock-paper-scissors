@@ -1,5 +1,9 @@
 package com.rps.models;
 
+import com.rps.types.GameMode;
+import com.rps.types.PlayerPlay;
+import javafx.util.Pair;
+
 public class PlayerPair<F extends Player, S extends Player> {
     private F mainPlayer;
     private S adversaryPlayer;
@@ -9,19 +13,7 @@ public class PlayerPair<F extends Player, S extends Player> {
         this.adversaryPlayer = second;
     }
 
-    public void setMainPlayer(F mainPlayer) {
-        this.mainPlayer = mainPlayer;
-    }
-
-    public void setAdversaryPlayer(S adversaryPlayer) {
-        this.adversaryPlayer = adversaryPlayer;
-    }
-
-    public F getMainPlayer() {
-        return mainPlayer;
-    }
-
-    public S getAdversaryPlayer() {
-        return adversaryPlayer;
+    public Pair<PlayerPlay, PlayerPlay> play(GameMode gameMode) {
+        return new Pair<>(this.mainPlayer.play(gameMode), this.adversaryPlayer.play(gameMode));
     }
 }

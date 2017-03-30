@@ -3,14 +3,17 @@ package com.rps.models;
 import com.rps.services.PlayerPlayService;
 import com.rps.types.GameMode;
 import com.rps.types.PlayerPlay;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class Player {
-    protected PlayerPlayService playerPlayService;
+    protected static final Logger logger = LoggerFactory.getLogger(Player.class);
 
-    protected Player() {}
+    protected PlayerPlayService playerPlayService;
 
     protected Player(PlayerPlayService playerPlayService) {
         this.playerPlayService = playerPlayService;
     }
-    public abstract PlayerPlay play(GameMode gameMode);
+
+    protected abstract PlayerPlay play(GameMode gameMode);
 }

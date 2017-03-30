@@ -1,0 +1,354 @@
+2017-03-30 11:06:55,317 INFO [main] c.r.RPSGameApp - Starting RPSGameApp on MALLL-RMATA with PID 19326 (/home/rmata/projects/rock-paper-scissors/rps-game/target/classes started by rmata in /home/rmata/projects/rock-paper-scissors/rps-game)
+2017-03-30 11:06:55,320 INFO [main] c.r.RPSGameApp - No active profile set, falling back to default profiles: default
+2017-03-30 11:06:55,412 INFO [main] o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5bcf0fc5: startup date [Thu Mar 30 11:06:55 CEST 2017]; root of context hierarchy
+2017-03-30 11:06:56,448 INFO [main] o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-03-30 11:06:56,459 INFO [main] c.r.RPSGameApp - Started RPSGameApp in 1.566 seconds (JVM running for 5.887)
+2017-03-30 11:07:06,627 INFO [main] c.r.RPSGameApp - GameMode chosen: REMOTE
+2017-03-30 11:07:06,627 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 1
+2017-03-30 11:07:06,689 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: PAPER
+2017-03-30 11:07:06,690 INFO [main] c.r.RPSGameApp - Result: Player 2 wins
+2017-03-30 11:07:06,690 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:06,690 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 2
+2017-03-30 11:07:06,699 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: ROCK
+2017-03-30 11:07:06,700 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:07:06,700 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:06,700 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 3
+2017-03-30 11:07:06,705 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: PAPER
+2017-03-30 11:07:06,706 INFO [main] c.r.RPSGameApp - Result: Player 2 wins
+2017-03-30 11:07:06,706 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:06,706 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 4
+2017-03-30 11:07:06,709 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: PAPER
+2017-03-30 11:07:06,710 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:07:06,710 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:06,712 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 5
+2017-03-30 11:07:06,714 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: SCISSORS
+2017-03-30 11:07:06,715 INFO [main] c.r.RPSGameApp - Result: Player 1 wins
+2017-03-30 11:07:06,715 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:06,715 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 6
+2017-03-30 11:07:06,717 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: PAPER
+2017-03-30 11:07:06,718 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:07:06,718 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:06,718 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 7
+2017-03-30 11:07:06,723 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: ROCK
+2017-03-30 11:07:06,724 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:07:06,724 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:06,724 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 8
+2017-03-30 11:07:06,733 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: SCISSORS
+2017-03-30 11:07:06,734 INFO [main] c.r.RPSGameApp - Result: Player 1 wins
+2017-03-30 11:07:06,734 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:06,734 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 9
+2017-03-30 11:07:06,737 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: SCISSORS
+2017-03-30 11:07:06,737 INFO [main] c.r.RPSGameApp - Result: Player 1 wins
+2017-03-30 11:07:06,737 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:06,737 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 10
+2017-03-30 11:07:06,740 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: ROCK
+2017-03-30 11:07:06,740 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:07:06,740 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:06,985 INFO [Thread-2] o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@5bcf0fc5: startup date [Thu Mar 30 11:06:55 CEST 2017]; root of context hierarchy
+2017-03-30 11:07:06,988 INFO [Thread-2] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2017-03-30 11:07:45,148 INFO [main] c.r.RPSGameApp - Starting RPSGameApp on MALLL-RMATA with PID 19415 (/home/rmata/projects/rock-paper-scissors/rps-game/target/classes started by rmata in /home/rmata/projects/rock-paper-scissors/rps-game)
+2017-03-30 11:07:45,153 INFO [main] c.r.RPSGameApp - No active profile set, falling back to default profiles: default
+2017-03-30 11:07:45,229 INFO [main] o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@277ab162: startup date [Thu Mar 30 11:07:45 CEST 2017]; root of context hierarchy
+2017-03-30 11:07:46,163 INFO [main] o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-03-30 11:07:46,178 INFO [main] c.r.RPSGameApp - Started RPSGameApp in 1.377 seconds (JVM running for 4.726)
+2017-03-30 11:07:50,131 INFO [main] c.r.RPSGameApp - GameMode chosen: REMOTE
+2017-03-30 11:07:50,131 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 1
+2017-03-30 11:07:50,199 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: PAPER
+2017-03-30 11:07:50,200 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:07:50,200 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:50,201 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 2
+2017-03-30 11:07:50,205 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: PAPER
+2017-03-30 11:07:50,205 INFO [main] c.r.RPSGameApp - Result: Player 1 wins
+2017-03-30 11:07:50,205 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:50,205 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 3
+2017-03-30 11:07:50,211 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: SCISSORS
+2017-03-30 11:07:50,211 INFO [main] c.r.RPSGameApp - Result: Player 2 wins
+2017-03-30 11:07:50,211 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:50,212 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 4
+2017-03-30 11:07:50,216 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: PAPER
+2017-03-30 11:07:50,216 INFO [main] c.r.RPSGameApp - Result: Player 2 wins
+2017-03-30 11:07:50,216 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:50,218 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 5
+2017-03-30 11:07:50,225 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: PAPER
+2017-03-30 11:07:50,226 INFO [main] c.r.RPSGameApp - Result: Player 2 wins
+2017-03-30 11:07:50,227 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:50,227 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 6
+2017-03-30 11:07:50,234 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: SCISSORS
+2017-03-30 11:07:50,235 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:07:50,237 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:50,237 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 7
+2017-03-30 11:07:50,239 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: ROCK
+2017-03-30 11:07:50,239 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:07:50,239 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:50,239 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 8
+2017-03-30 11:07:50,242 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: SCISSORS
+2017-03-30 11:07:50,242 INFO [main] c.r.RPSGameApp - Result: Player 2 wins
+2017-03-30 11:07:50,242 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:50,242 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 9
+2017-03-30 11:07:50,245 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: PAPER
+2017-03-30 11:07:50,245 INFO [main] c.r.RPSGameApp - Result: Player 2 wins
+2017-03-30 11:07:50,245 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:50,245 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 10
+2017-03-30 11:07:50,248 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: ROCK
+2017-03-30 11:07:50,248 INFO [main] c.r.RPSGameApp - Result: Player 2 wins
+2017-03-30 11:07:50,248 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:07:50,434 INFO [Thread-2] o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@277ab162: startup date [Thu Mar 30 11:07:45 CEST 2017]; root of context hierarchy
+2017-03-30 11:07:50,435 INFO [Thread-2] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2017-03-30 11:08:23,568 INFO [main] c.r.RPSGameApp - Starting RPSGameApp on MALLL-RMATA with PID 19502 (/home/rmata/projects/rock-paper-scissors/rps-game/target/classes started by rmata in /home/rmata/projects/rock-paper-scissors/rps-game)
+2017-03-30 11:08:23,577 INFO [main] c.r.RPSGameApp - No active profile set, falling back to default profiles: default
+2017-03-30 11:08:23,714 INFO [main] o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6ab96b4f: startup date [Thu Mar 30 11:08:23 CEST 2017]; root of context hierarchy
+2017-03-30 11:08:24,825 INFO [main] o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-03-30 11:08:24,838 INFO [main] c.r.RPSGameApp - Started RPSGameApp in 1.654 seconds (JVM running for 5.363)
+2017-03-30 11:08:27,162 INFO [main] c.r.RPSGameApp - GameMode chosen: REMOTE
+2017-03-30 11:08:27,163 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 1
+2017-03-30 11:08:27,235 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: PAPER
+2017-03-30 11:08:27,236 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:08:27,236 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:08:27,236 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 2
+2017-03-30 11:08:27,243 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: ROCK
+2017-03-30 11:08:27,243 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:08:27,243 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:08:27,243 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 3
+2017-03-30 11:08:27,246 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: ROCK
+2017-03-30 11:08:27,246 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:08:27,246 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:08:27,246 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 4
+2017-03-30 11:08:27,259 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: SCISSORS
+2017-03-30 11:08:27,260 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:08:27,260 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:08:27,261 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 5
+2017-03-30 11:08:27,267 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: ROCK
+2017-03-30 11:08:27,268 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:08:27,268 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:08:27,268 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 6
+2017-03-30 11:08:27,271 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: PAPER
+2017-03-30 11:08:27,271 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:08:27,271 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:08:27,271 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 7
+2017-03-30 11:08:27,276 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: ROCK
+2017-03-30 11:08:27,277 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:08:27,277 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:08:27,277 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 8
+2017-03-30 11:08:27,282 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: PAPER
+2017-03-30 11:08:27,282 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:08:27,282 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:08:27,282 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 9
+2017-03-30 11:08:27,285 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: PAPER
+2017-03-30 11:08:27,285 INFO [main] c.r.RPSGameApp - Result: Main Player wins
+2017-03-30 11:08:27,285 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:08:27,285 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 10
+2017-03-30 11:08:27,288 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: ROCK
+2017-03-30 11:08:27,288 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:08:27,289 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:08:27,506 INFO [Thread-2] o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6ab96b4f: startup date [Thu Mar 30 11:08:23 CEST 2017]; root of context hierarchy
+2017-03-30 11:08:27,507 INFO [Thread-2] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2017-03-30 11:16:17,469 INFO [main] c.r.RPSGameApp - Starting RPSGameApp on MALLL-RMATA with PID 19903 (/home/rmata/projects/rock-paper-scissors/rps-game/target/classes started by rmata in /home/rmata/projects/rock-paper-scissors/rps-game)
+2017-03-30 11:16:17,483 INFO [main] c.r.RPSGameApp - No active profile set, falling back to default profiles: default
+2017-03-30 11:16:17,566 INFO [main] o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@46a231a3: startup date [Thu Mar 30 11:16:17 CEST 2017]; root of context hierarchy
+2017-03-30 11:16:18,729 INFO [main] o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-03-30 11:16:18,743 INFO [main] c.r.RPSGameApp - Started RPSGameApp in 1.851 seconds (JVM running for 5.996)
+2017-03-30 11:16:20,328 INFO [main] c.r.RPSGameApp - GameMode chosen: REMOTE
+2017-03-30 11:16:20,329 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 1
+2017-03-30 11:16:20,411 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: ROCK
+2017-03-30 11:16:20,411 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:16:20,412 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:16:20,412 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 2
+2017-03-30 11:16:20,415 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: ROCK
+2017-03-30 11:16:20,415 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:16:20,415 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:16:20,415 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 3
+2017-03-30 11:16:20,425 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: PAPER
+2017-03-30 11:16:20,426 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:16:20,427 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:16:20,429 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 4
+2017-03-30 11:16:20,433 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: PAPER
+2017-03-30 11:16:20,433 INFO [main] c.r.RPSGameApp - Result: Main Player wins
+2017-03-30 11:16:20,433 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:16:20,436 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 5
+2017-03-30 11:16:20,441 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: ROCK
+2017-03-30 11:16:20,442 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:16:20,442 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:16:20,442 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 6
+2017-03-30 11:16:20,445 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: PAPER
+2017-03-30 11:16:20,445 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:16:20,445 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:16:20,445 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 7
+2017-03-30 11:16:20,448 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: SCISSORS
+2017-03-30 11:16:20,448 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:16:20,448 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:16:20,448 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 8
+2017-03-30 11:16:20,451 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: SCISSORS
+2017-03-30 11:16:20,451 INFO [main] c.r.RPSGameApp - Result: Main Player wins
+2017-03-30 11:16:20,451 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:16:20,451 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 9
+2017-03-30 11:16:20,454 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: PAPER
+2017-03-30 11:16:20,454 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:16:20,454 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:16:20,454 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 10
+2017-03-30 11:16:20,457 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: SCISSORS
+2017-03-30 11:16:20,457 INFO [main] c.r.RPSGameApp - Result: Main Player wins
+2017-03-30 11:16:20,457 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:16:20,650 INFO [Thread-2] o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@46a231a3: startup date [Thu Mar 30 11:16:17 CEST 2017]; root of context hierarchy
+2017-03-30 11:16:20,651 INFO [Thread-2] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2017-03-30 11:37:56,306 INFO [main] c.r.RPSGameApp - Starting RPSGameApp on MALLL-RMATA with PID 20704 (/home/rmata/projects/rock-paper-scissors/rps-game/target/classes started by rmata in /home/rmata/projects/rock-paper-scissors/rps-game)
+2017-03-30 11:37:56,310 INFO [main] c.r.RPSGameApp - No active profile set, falling back to default profiles: default
+2017-03-30 11:37:56,386 INFO [main] o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@19df0fbd: startup date [Thu Mar 30 11:37:56 CEST 2017]; root of context hierarchy
+2017-03-30 11:37:57,527 INFO [main] o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-03-30 11:37:57,538 INFO [main] c.r.RPSGameApp - Started RPSGameApp in 1.662 seconds (JVM running for 5.911)
+2017-03-30 11:37:59,388 INFO [main] c.r.RPSGameApp - GameMode chosen: REMOTE
+2017-03-30 11:37:59,388 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 1
+2017-03-30 11:37:59,454 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: PAPER
+2017-03-30 11:37:59,667 INFO [Thread-2] o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@19df0fbd: startup date [Thu Mar 30 11:37:56 CEST 2017]; root of context hierarchy
+2017-03-30 11:37:59,672 INFO [Thread-2] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2017-03-30 11:39:00,954 INFO [main] c.r.RPSGameApp - Starting RPSGameApp on MALLL-RMATA with PID 20798 (/home/rmata/projects/rock-paper-scissors/rps-game/target/classes started by rmata in /home/rmata/projects/rock-paper-scissors/rps-game)
+2017-03-30 11:39:00,957 INFO [main] c.r.RPSGameApp - No active profile set, falling back to default profiles: default
+2017-03-30 11:39:01,057 INFO [main] o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@19eebb68: startup date [Thu Mar 30 11:39:01 CEST 2017]; root of context hierarchy
+2017-03-30 11:39:02,330 INFO [main] o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-03-30 11:39:02,350 INFO [main] c.r.RPSGameApp - Started RPSGameApp in 1.851 seconds (JVM running for 5.809)
+2017-03-30 11:39:03,435 INFO [main] c.r.RPSGameApp - GameMode chosen: REMOTE
+2017-03-30 11:39:03,436 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 1
+2017-03-30 11:39:03,505 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: SCISSORS
+2017-03-30 11:39:03,505 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:39:03,505 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:39:03,505 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 2
+2017-03-30 11:39:03,508 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: PAPER
+2017-03-30 11:39:03,508 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:39:03,508 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:39:03,508 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 3
+2017-03-30 11:39:03,512 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: ROCK
+2017-03-30 11:39:03,513 INFO [main] c.r.RPSGameApp - Result: Main Player wins
+2017-03-30 11:39:03,514 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:39:03,514 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 4
+2017-03-30 11:39:03,518 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: SCISSORS
+2017-03-30 11:39:03,518 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:39:03,518 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:39:03,518 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 5
+2017-03-30 11:39:03,521 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: PAPER
+2017-03-30 11:39:03,521 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:39:03,521 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:39:03,521 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 6
+2017-03-30 11:39:03,525 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: SCISSORS
+2017-03-30 11:39:03,525 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:39:03,526 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:39:03,526 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 7
+2017-03-30 11:39:03,530 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: PAPER
+2017-03-30 11:39:03,530 INFO [main] c.r.RPSGameApp - Result: Draw
+2017-03-30 11:39:03,530 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:39:03,530 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 8
+2017-03-30 11:39:03,534 INFO [main] c.r.RPSGameApp - Main Player play: SCISSORS | Adversary Player play: PAPER
+2017-03-30 11:39:03,534 INFO [main] c.r.RPSGameApp - Result: Main Player wins
+2017-03-30 11:39:03,534 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:39:03,534 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 9
+2017-03-30 11:39:03,541 INFO [main] c.r.RPSGameApp - Main Player play: ROCK | Adversary Player play: PAPER
+2017-03-30 11:39:03,541 INFO [main] c.r.RPSGameApp - Result: Adversary Player wins
+2017-03-30 11:39:03,541 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:39:03,541 INFO [main] c.r.RPSGameApp - PLAYING ITERATION: 10
+2017-03-30 11:39:03,545 INFO [main] c.r.RPSGameApp - Main Player play: PAPER | Adversary Player play: ROCK
+2017-03-30 11:39:03,545 INFO [main] c.r.RPSGameApp - Result: Main Player wins
+2017-03-30 11:39:03,545 INFO [main] c.r.RPSGameApp - 
+
+
+2017-03-30 11:39:03,545 INFO [main] c.r.RPSGameApp - TOTAL RESULTS:
+2017-03-30 11:39:03,545 INFO [main] c.r.RPSGameApp - MAIN PLAYER GAINS: 3
+2017-03-30 11:39:03,545 INFO [main] c.r.RPSGameApp - ADVERSARY PLAYER GAINS: 4
+2017-03-30 11:39:03,546 INFO [main] c.r.RPSGameApp - DRAWS: 3
+2017-03-30 11:39:03,782 INFO [Thread-2] o.s.c.a.AnnotationConfigApplicationContext - Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@19eebb68: startup date [Thu Mar 30 11:39:01 CEST 2017]; root of context hierarchy
+2017-03-30 11:39:03,790 INFO [Thread-2] o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
