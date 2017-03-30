@@ -1,12 +1,8 @@
 package com.rps;
 
-import static com.rps.types.PlayResult.MAIN_PLAYER_WINS;
-import static com.rps.types.PlayResult.ADVERSARY_PLAYER_WINS;
-import static com.rps.types.PlayResult.DRAW;
-
-import com.rps.models.AdversaryPlayer;
-import com.rps.models.MainPlayer;
-import com.rps.models.PlayerPair;
+import com.rps.services.ConsoleInputScanner;
+import com.rps.services.PayoffMatrixService;
+import com.rps.services.PlayersPlayService;
 import com.rps.types.GameMode;
 import com.rps.types.PlayResult;
 import com.rps.types.PlayerPlay;
@@ -18,24 +14,32 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import javax.annotation.Resource;
 import java.util.EnumMap;
 import java.util.Map;
-import java.util.Scanner;
+
+import static com.rps.types.PlayResult.ADVERSARY_PLAYER_WINS;
+import static com.rps.types.PlayResult.DRAW;
+import static com.rps.types.PlayResult.MAIN_PLAYER_WINS;
 
 @SpringBootApplication
 public class RPSGameApp {
-    private static final Integer NUM_ITERATIONS = 10;
     private static final Logger logger = LoggerFactory.getLogger(RPSGameApp.class);
+    private static final Integer NUM_ITERATIONS = 10;
+
+    private Map<PlayerPlay, Map<PlayerPlay, Integer>> payoffMatrix;
+    private Integer userChoice;
 
     @Autowired
-    protected PlayerPair<MainPlayer, AdversaryPlayer> players;
+    ConsoleInputScanner consoleInputScanner;
 
     @Autowired
-    protected Map<PlayerPlay, Map<PlayerPlay, Integer>> payoffMatrix;
+    PlayersPlayService playerPlayService;
 
-    protected Map<PlayResult, Integer> results = new EnumMap<>(PlayResult.class);
+    @Autowired
+    PayoffMatrixService payoffMatrixService;
 
-    protected Integer userChoice;
+    Map<PlayResult, Integer> results = new EnumMap<>(PlayResult.class);
 
     public static void main(String[] args) throws Throwable {
         ConfigurableApplicationContext context = new SpringApplicationBuilder()
@@ -46,23 +50,23 @@ public class RPSGameApp {
         app.start(context);
     }
 
-    protected void start(ConfigurableApplicationContext context) {
-        GameMode gameMode = null;
-
+    private void start(ConfigurableApplicationContext context) {
+        initializePayoffMatrix();
         initializeResults();
+
         showPayoffMatrix();
-        gameMode = getGameModeFromConsole(context, gameMode);
+        GameMode gameMode = getGameModeFromConsole(context);
         makePlayersPlay(gameMode);
 
     }
 
-    protected void makePlayersPlay(GameMode gameMode) {
-        if (userChoice < 4) {
+    void makePlayersPlay(GameMode gameMode) {
+        if (gameMode != null) {
             logger.info("GameMode chosen: " + gameMode.name());
             for (int i = 0; i < NUM_ITERATIONS; i++) {
                 logger.info("PLAYING ITERATION: " + (i + 1) );
 
-                Pair<PlayerPlay, PlayerPlay> playersPlayPair = players.play(gameMode);
+                Pair<PlayerPlay, PlayerPlay> playersPlayPair = playerPlayService.getPlayersPlay(gameMode);
                 logger.info("Main Player play: " + playersPlayPair.getKey() + " | Adversary Player play: " + playersPlayPair.getValue());
 
                 updateResults(playersPlayPair);
@@ -76,7 +80,8 @@ public class RPSGameApp {
         }
     }
 
-    protected void updateResults(Pair<PlayerPlay, PlayerPlay> playersPlayPair) {
+
+    private void updateResults(Pair<PlayerPlay, PlayerPlay> playersPlayPair) {
         Integer matrixValue = payoffMatrix.get(playersPlayPair.getKey()).get(playersPlayPair.getValue());
         String playResultStr;
 
@@ -93,23 +98,34 @@ public class RPSGameApp {
         logger.info("Result: " + playResultStr);
     }
 
-    protected void updateAdversaryPlayerResults() {
+    private void updateAdversaryPlayerResults() {
         Integer currentResult = results.get(ADVERSARY_PLAYER_WINS);
         results.put(ADVERSARY_PLAYER_WINS, currentResult + 1);
     }
 
-    protected void updateDrawResults() {
+    private void updateDrawResults() {
         Integer currentResult = results.get(DRAW);
         results.put(DRAW, currentResult + 1);
     }
 
-    protected void updateMainPlayerResults() {
+    private void updateMainPlayerResults() {
         Integer currentResult = results.get(MAIN_PLAYER_WINS);
         results.put(MAIN_PLAYER_WINS, currentResult + 1);
     }
 
-    private GameMode getGameModeFromConsole(ConfigurableApplicationContext context, GameMode gameMode) {
-        userChoice = showMenu();
+    void initializePayoffMatrix() {
+        payoffMatrix = payoffMatrixService.buildPayoffMatrix();
+    }
+
+    void initializeResults() {
+        results.put(MAIN_PLAYER_WINS, 0);
+        results.put(ADVERSARY_PLAYER_WINS, 0);
+        results.put(DRAW, 0);
+    }
+
+    GameMode getGameModeFromConsole(ConfigurableApplicationContext context) {
+        GameMode gameMode = null;
+        userChoice = consoleInputScanner.getOptionFromUser();
 
         switch (userChoice) {
         case 1:
@@ -124,14 +140,9 @@ public class RPSGameApp {
         return gameMode;
     }
 
-    private void initializeResults() {
-        results.put(MAIN_PLAYER_WINS, 0);
-        results.put(ADVERSARY_PLAYER_WINS, 0);
-        results.put(DRAW, 0);
-    }
-
     private void showPayoffMatrix() {
-
+        System.out.println("\n\nPAYOFF MATRIX");
+        System.out.println("--------------");
         for (PlayerPlay player1Play : payoffMatrix.keySet()) {
             Map<PlayerPlay, Integer> playerPlayIntegerMap = payoffMatrix.get(player1Play);
             for (PlayerPlay player2Play : playerPlayIntegerMap.keySet()) {
@@ -140,22 +151,6 @@ public class RPSGameApp {
             }
             System.out.println();
         }
-    }
-
-    private static int showMenu() {
-
-        int selection;
-        Scanner input = new Scanner(System.in);
-
-        System.out.println("Choose one Game Mode");
-        System.out.println("-------------------------\n");
-        System.out.println("1 - FAIR");
-        System.out.println("2 - UNFAIR");
-        System.out.println("3 - REMOTE");
-        System.out.println("4 - QUIT");
-
-        selection = input.nextInt();
-        return selection;
     }
 
 }
