@@ -18,6 +18,6 @@ This injects 3 service providers each of them with its own purpose:
 1. To run the game first, make sure you've got the common library installed in your local maven repository.
 `cd PATH_TO_YOUR_WORKSPACE/rps-common` and then `mvn clean install`
 1. Run the Remote Web Application:
-`cd PATH_TO_YOUR_WORKSPACE/rps-common` then `mvn clean package` and `mvn spring-boot run`
-1. Finally run the Game by the Spring boot command as the previous one: `mvn spring-boot-run`
+`cd PATH_TO_YOUR_WORKSPACE/rps-common` then `mvn clean package` and `mvn spring-boot:run`
+1. Finally run the Game by the Spring boot command as the previous one: `mvn spring-boot:run`
 
