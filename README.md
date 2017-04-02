@@ -23,4 +23,5 @@ This injects 3 service providers each of them with its own purpose:
 
 # Possible improvements
 The _ConsoleInputService_ could keep showing the menu while the introduced option is a not valid one and show a WARNING message to the user indicating that a not valid option was introduced, try a valid one.
+Unit Test to verify the correct input from the users
 
