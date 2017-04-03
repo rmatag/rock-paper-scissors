@@ -39,7 +39,6 @@ public class ConsoleInputScanner {
                 correctSelectedOption = option >= FIRST_CORRECT_OPTION && option <= LAST_CORRECT_OPTION;
             }
         } catch (InputMismatchException e) {
-            System.out.println("Please, choose a number as option :)");
             throw e;
         }
 

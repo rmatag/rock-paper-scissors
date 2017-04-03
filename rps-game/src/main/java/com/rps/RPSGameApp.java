@@ -15,6 +15,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.EnumMap;
+import java.util.InputMismatchException;
 import java.util.Map;
 
 import static com.rps.types.PlayResult.ADVERSARY_PLAYER_WINS;
@@ -53,10 +54,13 @@ public class RPSGameApp {
         initializePayoffMatrix();
         initializeResults();
 
-        showPayoffMatrix();
-        GameMode gameMode = getGameModeFromConsole(context);
-        makePlayersPlay(gameMode);
-
+        try {
+            showPayoffMatrix();
+            GameMode gameMode = getGameModeFromConsole(context);
+            makePlayersPlay(gameMode);
+        } catch (InputMismatchException e) {
+            System.out.println("Please, choose a number as option :)");
+        }
     }
 
     void makePlayersPlay(GameMode gameMode) {
