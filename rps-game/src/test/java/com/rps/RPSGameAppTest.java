@@ -13,6 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.InjectMocks;
 import org.mockito.MockitoAnnotations;
 import org.springframework.context.ConfigurableApplicationContext;
 
@@ -43,14 +44,15 @@ public class RPSGameAppTest {
     @Mock
     ConfigurableApplicationContext context;
 
+    @InjectMocks
     RPSGameApp app = new RPSGameApp();
 
     @Before
     public void init() {
         MockitoAnnotations.initMocks(this);
-        app.consoleInputScanner = consoleInputScannerMock;
-        app.playerPlayService = playersPlayServiceMock;
-        app.payoffMatrixService = payoffMatrixServiceMock;
+        //app.consoleInputScanner = consoleInputScannerMock;
+        //app.playerPlayService = playersPlayServiceMock;
+        //app.payoffMatrixService = payoffMatrixServiceMock;
     }
 
     @Test
