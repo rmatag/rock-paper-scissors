@@ -21,7 +21,7 @@ This injects 3 service providers each of them with its own purpose:
 `cd PATH_TO_YOUR_WORKSPACE/rps-remote-player` then `mvn clean package` and `mvn spring-boot:run`
 1. Finally run the Game by the Spring boot command as the previous one: `mvn spring-boot:run`
 
-# Possible improvements
+# Possible improvements (Already Covered)
 The _ConsoleInputService_ could keep showing the menu while the introduced option is a not valid one and show a WARNING message to the user indicating that a not valid option was introduced, try a valid one.
 Unit Test to verify the correct input from the users
 
